@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Container, Typography } from "@mui/material";
-import "./HeroSection.css"; // Import the CSS file
+import "./HeroSection.css";
 
 const HeroSection = ({ onReferNowClick }) => {
   return (

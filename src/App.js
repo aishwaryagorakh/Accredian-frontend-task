@@ -1,34 +1,3 @@
-// import React from "react";
-// import { CssBaseline, Container } from "@mui/material";
-
-// import Navbar from "./components/Navbar";
-// import Benefits from "./components/Benefits";
-// import FAQ from "./components/FAQ";
-// import Footer from "./components/Footer";
-// import HeroSection from "./components/HeroSection";
-
-// function App() {
-//   return (
-//     <>
-//       <CssBaseline />
-//       <Navbar />
-//       <HeroSection />
-//       <Container id="benefits">
-//         <Benefits />
-//       </Container>
-//       <Container id="faq">
-//         <FAQ />
-//       </Container>
-//       <Container id="support">
-//         <Footer />
-//       </Container>
-//     </>
-//   );
-// }
-
-// export default App;
-// App.js
-
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
