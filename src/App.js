@@ -4,6 +4,10 @@ import HeroSection from "./components/HeroSection";
 import ReferralModal from "./components/ReferralModal";
 import Footer from "./components/Footer";
 import axios from "axios";
+import Navbar from "./components/Navbar";
+import Benefits from "./components/Benefits";
+import ProgramTable from "./components/ProgramTable";
+import FAQ from "./components/FAQ";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,15 +38,21 @@ function App() {
   };
 
   return (
-    <Router>
-      <HeroSection onReferNowClick={handleReferNowClick} />
-      <ReferralModal
-        open={isModalOpen}
-        onClose={handleCloseModal}
-        onSubmit={handleSubmitReferral}
-      />
-      <Footer />
-    </Router>
+    <>
+      <Navbar />
+      <Router>
+        <HeroSection onReferNowClick={handleReferNowClick} />
+        <ReferralModal
+          open={isModalOpen}
+          onClose={handleCloseModal}
+          onSubmit={handleSubmitReferral}
+        />
+        <Benefits />
+        <FAQ />
+        <ProgramTable />
+        <Footer />
+      </Router>
+    </>
   );
 }
 
