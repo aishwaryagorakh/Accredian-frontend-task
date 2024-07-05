@@ -1,0 +1,44 @@
+.benefits {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    height: 50vh;
+    background-image: url(https://s3-alpha-sig.figma.com/img/f8bf/9271/2c05e77a4b76d26c35bb05a554cb6838?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iKh1HZKC4zIcZcDij829zQTuPG-YnQguZHNjZDgX~LzyNm1~NJrynfq7uK4W26~YwGNGivloEPBl0g5T63gCPfeVHdGRbU5gjNtPESFHHQySdMkx2lQ2BS8IHRYZww9fTQMz4f8illlyILdDydt4Jk9hQQtSNBFpsB5i8FksNBTzKT0d8ywIh1G303FsjKpK168ptBg7-Rv36FPTqnT0oQP8N54SOePDoPdFaw68Imrwy5i2Ig8rJbNwi-OHGF1FYc9V4GYwvdjgL47mfhf6iITIrF9hGe3A1E7Gb-zf5ZOPVmLPQKP61PRSggFsoa~rfO-veHHtBzrCXw7ZnkwMsQ__);
+  }
+  
+  .lists {
+    color: #333;
+  }
+  
+  .benefits-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .benefits-list {
+    max-width: 600px;
+    margin:auto
+  }
+  
+  .benefits-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-left: 120px;
+  }
+  
+  .benefits-list-item-icon {
+    color: #1976d2;
+    margin-right: 16px;
+  }
+  
+  .benefits-list-item-text {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .benefits-list-item:last-child {
+    border-bottom: none;
+  }
+  

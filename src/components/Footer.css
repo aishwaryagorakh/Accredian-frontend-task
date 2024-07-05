@@ -1,0 +1,42 @@
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .footer-about {
+    margin-bottom: 20px;
+  }
+  
+  .footer-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .footer-list-item {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .footer-list-item .MuiListItemText-root {
+    color: #fff;
+  }
+  
+  .footer-follow {
+    margin-top: 20px;
+  }
+  

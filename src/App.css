@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +37,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+.css-h4y409-MuiList-root {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  margin-top: 14%;
+}
+h1{
+ margin-left: 45%;
+  padding: auto;
 }

@@ -1,0 +1,37 @@
+.table-container {
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table {
+    min-width: 650px;
+  }
+
+  .title{
+    margin: auto;
+  }
+  
+  .table-header {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .table-cell {
+    font-size: 16px;
+  }
+  
+  .table-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table-header-cell {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .container {
+    padding: 50px 0;
+  }
+  

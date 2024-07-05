@@ -1,24 +1,79 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+// import { CssBaseline, Container } from "@mui/material";
+
+// import Navbar from "./components/Navbar";
+// import Benefits from "./components/Benefits";
+// import FAQ from "./components/FAQ";
+// import Footer from "./components/Footer";
+// import HeroSection from "./components/HeroSection";
+
+// function App() {
+//   return (
+//     <>
+//       <CssBaseline />
+//       <Navbar />
+//       <HeroSection />
+//       <Container id="benefits">
+//         <Benefits />
+//       </Container>
+//       <Container id="faq">
+//         <FAQ />
+//       </Container>
+//       <Container id="support">
+//         <Footer />
+//       </Container>
+//     </>
+//   );
+// }
+
+// export default App;
+// App.js
+
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import HeroSection from "./components/HeroSection";
+import ReferralModal from "./components/ReferralModal";
+import Footer from "./components/Footer";
+import axios from "axios";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleReferNowClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmitReferral = async (referrer, referee) => {
+    try {
+      const response = await axios.post("http://localhost:3300/api/referrals", {
+        referrerName: referrer.name,
+        referrerEmail: referrer.email,
+        refereeName: referee.name,
+        refereeEmail: referee.email,
+      });
+      console.log("Referral submitted:", response.data);
+      handleCloseModal(); // Close modal after successful submission
+      // Optionally, add logic to display success message or handle further actions
+    } catch (error) {
+      console.error("Error submitting referral:", error.response.data);
+      // Handle error (e.g., show error message to user)
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <HeroSection onReferNowClick={handleReferNowClick} />
+      <ReferralModal
+        open={isModalOpen}
+        onClose={handleCloseModal}
+        onSubmit={handleSubmitReferral}
+      />
+      <Footer />
+    </Router>
   );
 }
 
